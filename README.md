@@ -1,2 +1,2 @@
-# Data-Science-Foundations-
+# Data-Science-Foundations
 Data science notebooks  
