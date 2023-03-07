@@ -76,8 +76,7 @@ class Graph(Digraph):
 
 def buildCityGraph(graphType):
     g = graphType()
-    for name in ('Boston', 'Providence', 'New York', 'Chicago',
-                 'Denver', 'Phoenix', 'Los Angeles'):  # Create 7 nodes
+    for name in ('Boston', 'Providence', 'New York', 'Chicago', 'Denver', 'Phoenix', 'Los Angeles'):  # Create 7 nodes
         g.addNode(Node(name))
     g.addEdge(Edge(g.getNode('Boston'), g.getNode('Providence')))
     g.addEdge(Edge(g.getNode('Boston'), g.getNode('New York')))
@@ -125,7 +124,7 @@ def DFS(graph, start, end, path, shortest, toPrint=False):
 
 def shortestPath(graph, start, end, toPrint=False):
     """Assumes graph is a Digraph; start and end are nodes
-       Returns a shortest path from start to end in graph"""
+    Returns a shortest path from start to end in graph"""
     return DFS(graph, start, end, [], None, toPrint)
 
 
@@ -150,7 +149,7 @@ printQueue = True
 
 def BFS(graph, start, end, toPrint=False):
     """Assumes graph is a Digraph; start and end are nodes
-       Returns a shortest path from start to end in graph"""
+    Returns a shortest path from start to end in graph"""
     initPath = [start]
     pathQueue = [initPath]
     while len(pathQueue) != 0:
@@ -175,7 +174,7 @@ def BFS(graph, start, end, toPrint=False):
 
 def shortestPath(graph, start, end, toPrint=False):
     """Assumes graph is a Digraph; start and end are nodes
-       Returns a shortest path from start to end in graph"""
+    Returns a shortest path from start to end in graph"""
     return BFS(graph, start, end, toPrint)
 
 #testSP('Boston', 'Phoenix')
